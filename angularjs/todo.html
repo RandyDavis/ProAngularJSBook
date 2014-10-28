@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app>
+<html lang="en" data-ng-app="todoApp">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +8,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="bootstrap.css">
         <link rel="stylesheet" href="bootstrap-theme.css">
+        <script src="angular.js"></script>
+        <script>
+          var todoApp = angular.module("todoApp", []);
+        </script>
     </head>
     <body>
       <div class="page-header">
@@ -47,5 +51,6 @@
           </tbody>
         </table>
       </div>
+      <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     </body>
 </html>
