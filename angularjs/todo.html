@@ -30,6 +30,11 @@
               });
               return count;
             }
+
+            $scope.warningLevel = function() {
+              return $scope.incompleteCount() < 3 ? "label-success" : "label-warning";
+            }
+
           });
 
         </script>
@@ -38,7 +43,7 @@
       <div class="page-header">
         <h1>
           {{ todo.user }}'s To Do List
-          <span class="label label-default" data-ng-hide="incompleteCount() == 0">{{ incompleteCount() }}</span>
+          <span class="label label-default" data-ng-class="warningLevel()" data-ng-hide="incompleteCount() == 0">{{ incompleteCount() }}</span>
         </h1>
       </div>
       <div class="panel">
