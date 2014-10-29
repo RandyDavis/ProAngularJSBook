@@ -8,28 +8,16 @@
 
         var myApp = angular.module("demo", []);
 
-        myApp.controller("demoCtrl", function ($scope, $http) {
+        myApp.controller('demoCtrl', function ($scope, $http) {
             $http.get("todo.json").success(function (data) {
                 var jsonString = angular.toJson(data);
                 console.log(jsonString);
                 $scope.todos = angular.fromJson(jsonString);
-            });
+            })
         });
 
     </script>
-    <script type="text/javascript">
-        var myObject = {
-            name: "Adam",
-            weather: "sunny",
-        };
-
-        var myName = "Adam";
-        var myNumber = 23;
-
-        console.log("myObject: ", + angular.isObject(myObject));
-        console.log("myName: ", + angular.isObject(myName));
-        console.log("myNumber: ", + angular.isObject(myNumber));
-    </script>
+    
 </head>
 <body ng-controller="demoCtrl">
     <div class="panel">
