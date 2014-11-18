@@ -1,8 +1,8 @@
 <h2>Your Cart</h2>
 
-<div>
+<div ng-controller="cartSummaryController">
   <div class="alert alert-warning" ng-show="cartData.length == 0">
-    There are noe products in your shopping cart.
+    There are no products in your shopping cart.
     <a href="#/products" class="alert-link">Click here to return to the catalogue</a>
   </div>
 
